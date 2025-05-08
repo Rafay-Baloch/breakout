@@ -31,6 +31,8 @@ pip install pygame
 ![Gameplay](OIP.jpg)
 ![Gameplay](heart.png)
 ![Gameplay](breakout.png)
+![Gameplay](menu.png)
+![Gameplay](Gameover.png)
 
 Enjoy the game!
 
