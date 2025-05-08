@@ -1,5 +1,4 @@
 # breakout
-# breakout
 # Breakout Game 🎮
 
 This is a classic **Breakout-style arcade game** built using Python and Pygame.
@@ -30,6 +29,7 @@ pip install pygame
 
 ## 📸 Screenshot
 ![Gameplay](OIP.jpg)
+![Gameplay](heart.jpg)
 
 Enjoy the game!
 
