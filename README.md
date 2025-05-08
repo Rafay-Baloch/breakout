@@ -30,6 +30,7 @@ pip install pygame
 ## 📸 Screenshot
 ![Gameplay](OIP.jpg)
 ![Gameplay](heart.png)
+![Gameplay](breakout.png)
 
 Enjoy the game!
 
