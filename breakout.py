@@ -1,6 +1,7 @@
 
 import pygame
 import random
+# -------------------- MODULE 1: Initialization & Setup --------------------
 # initialize
 pygame.init()
 # font 
@@ -23,7 +24,7 @@ game_over_background = pygame.transform.scale(game_over_background, (800, 600))
 # Load heart image
 heart_image = pygame.image.load("heart.png")
 heart_image = pygame.transform.scale(heart_image, (30, 30))
-
+# -------------------- MODULE 2: Paddle & Ball Setup --------------------
 # Paddle variables
 paddle_x = 350
 paddle_y = 550
@@ -37,7 +38,7 @@ radius = 10
 
 # Extra life variables
 falling_hearts = []
-
+# -------------------- MODULE 3: Blocks Design --------------------
 # Blocks setup
 block_types = {
     "gold": {"color": (255, 215, 0), "hits": 4},
@@ -67,7 +68,7 @@ for row in range(block_rows):
             "type": block_type,
             "hits_left": block_types[block_type]["hits"]
         })
-
+# -------------------- MODULE 4: Life System & Falling Hearts --------------------
 # Game variables
 score = 0
 lives = 3
@@ -79,7 +80,7 @@ ball_color = (173, 216, 230)
 paddle_color = (0, 255, 0)
 text_color = (255, 255, 255)
 background_color = (0, 0, 0)
-
+# -------------------- MODULE 5: High Score Management --------------------
 # High Score File
 def read_high_score():
     global high_score
@@ -145,7 +146,7 @@ def show_game_over():
                 elif event.key == pygame.K_m:
                     main_menu()
                     game_over_running = False
-
+# -------------------- MODULE 6: Menus (Main, Pause, Game Over) --------------------
 # Main Menu
 def main_menu():
     read_high_score()
@@ -239,6 +240,8 @@ def show_pause_menu():
                 elif event.key == pygame.K_q:
                     pygame.quit()
                     exit()
+# -------------------- MODULE 7: Main Game Loop --------------------
+# Already defined in Module 1 as functions: read_high_score(), write_high_score()
 
 # Game Loop
 def game_loop():
@@ -359,7 +362,7 @@ def game_loop():
 
         pygame.display.flip()
         clock.tick(60)
-
+# -------------------- Start the Game --------------------
 # Start Game
 main_menu()
 pygame.quit()
